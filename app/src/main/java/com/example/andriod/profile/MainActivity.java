@@ -30,19 +30,19 @@ public class MainActivity extends AppCompatActivity {
                         Fragment selectedFragment = null;
                         switch (item.getItemId()) {
                             case R.id.action_item1:
-                                selectedFragment = oneFragment.newInstance();
-                                break;
-                            case R.id.action_item2:
                                 selectedFragment = twoFragment.newInstance();
                                 break;
-                            case R.id.action_item3:
+                            case R.id.action_item2:
                                 selectedFragment = Threefragment.newInstance();
                                 break;
-                            case R.id.action_item4:
+                            case R.id.action_item3:
                                 selectedFragment = fourFragment.newInstance();
                                 break;
-                            case R.id.action_item5:
+                            case R.id.action_item4:
                                 selectedFragment = fiveFragment.newInstance();
+                                break;
+                            case R.id.action_item5:
+                                selectedFragment = oneFragment.newInstance();
                                 break;
 
                         }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Manually displaying the first fragment - one time only
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, oneFragment.newInstance());
+        transaction.replace(R.id.frame_layout, twoFragment.newInstance());
         transaction.commit();
 
         //Used to select an item programmatically
